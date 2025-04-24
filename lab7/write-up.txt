@@ -1,0 +1,4 @@
+1. Around 3hrs
+2. Getting the ordinal colors set up was very satisfying. I enjoyed learning the ways the two visualization could connect to each other.
+3. I must have accidently deleted an extra line when replacing the on click function with the dispatcher version, which lead to a lot of time spent debugging and troubleshooting before reverting back to the previous version and trying again. Github is very useful!
+4. I debugged errors with chatgpt, specifically promting it to explain how x, y, width, and height, should be used to place the rectangle in the correct positions.
