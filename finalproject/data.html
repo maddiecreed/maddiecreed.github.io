@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Data</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #aaa;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Voting data and demographics for states with school voucher legislation</h1>
+  <h2>Metadata</h2>
+<div id="table1"></div>
+
+<h2>Dataset</h2>
+<div id="table2"></div>
+
+<script>
+// Load and insert first table
+fetch('/data/data-vis-final-metadata.csv')
+  .then(res => res.text())
+  .then(text => {
+    const rows = text.trim().split('\n').map(line => line.split(','));
+    const table = makeTable(rows);
+    document.getElementById('table1').appendChild(table);
+  });
+
+// Load and insert second table
+fetch('/data/data-vis-final-data.csv')
+  .then(res => res.text())
+  .then(text => {
+    const rows = text.trim().split('\n').map(line => line.split(','));
+    const table = makeTable(rows);
+    document.getElementById('table2').appendChild(table);
+  });
+
+// Reusable function to build HTML table
+function makeTable(rows) {
+  const table = document.createElement('table');
+  rows.forEach((row, i) => {
+    const tr = document.createElement('tr');
+    row.forEach(cell => {
+      const cellEl = document.createElement(i === 0 ? 'th' : 'td');
+      cellEl.textContent = cell.trim();
+      tr.appendChild(cellEl);
+    });
+    table.appendChild(tr);
+  });
+  return table;
+}
+</script>
+
+</body>
+</html>
