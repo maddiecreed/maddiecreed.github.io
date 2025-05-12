@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Voting Distribution Visualization</title>
+    <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body> 
+    <div class="page" role="main">
+        <header class="header" role="banner">
+            <h1>A demographic exploration of Republican disunity over school voucher policy</h1>
+            <p class="subtitle">An analysis of support for school vouchers by party and demographics at the state level. Data was collected from 7 states who proposed or passed school voucher legislation between 2022-2024.</p>
+        </header>
+
+        <div class="container">
+            <div id="vis" role="region" aria-label="Interactive visualization of voting distribution"></div>
+            <div id="prose" role="complementary" aria-label="Analysis and context">
+                <div class="step" id="step0" role="region" aria-label="Overview of voting statistics">
+                    <p><span class="count" id="state-count" aria-label="Number of states"></span> voted on bills that supported school vouchers, with a total of <span class="count" id="assignment-count" aria-label="Total number of votes"></span> votes by state representatives.</p>
+                </div>
+                <div class="step" id="step1" role="region" aria-label="Democrat voting statistics">
+                    <p><span class="count" id="democrat-no" aria-label="Percentage of Democrats voting against"></span>% (rounded) of Democrats across states voted <strong>against</strong> the bills.</p>
+                </div>
+                <div class="step" id="step2" role="region" aria-label="Republican voting statistics">
+                    <p><span class="count" id="republican-yes" aria-label="Percentage of Republicans voting for"></span>% of Republicans across states voted <strong>for</strong> the bills.</p>
+                </div>
+                <div class="step" id="step3" role="region" aria-label="Analysis question">
+                    <p> Why is there less party unity among Republicans than Democrats on the issue? Are there demographic differences between Republican districts that vote for school vouchers and those that vote against?</p>
+                </div>
+                <div class="step" id="step4" role="region" aria-label="Demographic comparison explanation">
+                    <p>We can compare demographics of Republican districts who voted "Yes" versus Republican districts who voted "No". Hover over an attribute to see more information.</p>
+                </div>
+                <div class="step" id="step5" role="region" aria-label="Attribute ordering explanation">
+                    <p>The demographic attributes are ordered left to right by smallest to largest difference in the average between "Yes" and "No" districts.</p>
+                </div>
+                <div class="step" id="step6" role="region" aria-label="State comparison explanation">
+                    <p>We can further compare these demographics between states and one state versus all states. Consider Georgia, which has a different ordering of demographics compared to all states</p>
+                </div>
+                <div class="step" id="step7" role="region" aria-label="Georgia specific analysis">
+                    <p>In constrast to most states, in Georgia a higher black population tends to correlate with more votes <strong>against</strong> the bill. One potential reason is that the Black population's size provides more voting power for Black people to vote against the bill. Or, given the history of freedom schools in Georgia, Black Georgian's may be more likely to support private schools. </p>
+                </div>
+                <div class="step" id="step8" role="region" aria-label="State selection instructions">
+                    <p>You can continue to compare states by using the "Select State" box in either visualization.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/stacked-barchart.js"></script>
+    <script src="js/parallel-coords.js"></script>
+    <script src="js/noframework.waypoints.min.js"></script>
+    <script src="js/scrollerVis.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

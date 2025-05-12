@@ -1,0 +1,100 @@
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background: #f7f7f7;
+}
+
+.page {
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.container {
+  position: relative;
+  margin-bottom: 100px;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+#vis {
+  position: sticky;
+  top: 2rem;
+  width: 800px;
+  height: 400px;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+#prose {
+  flex-grow: 1;
+  padding: 20px;
+  position: relative;
+}
+
+#prose .step {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.count {
+  padding: 0px 4px;
+  background: #efe9e9;
+  font-weight: 600;
+  border-radius: 8px;
+  margin: 0 4px;
+}
+
+.step {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.axis-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.bar-label {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.bar {
+  transition: fill 0.3s ease;
+}
+
+.bar:hover {
+  opacity: 0.8;
+}
+
+.pc-line {
+  transition: stroke 0.3s ease, stroke-width 0.3s ease, opacity 0.3s ease;
+}
+
+.pc-line:hover {
+  stroke-width: 2;
+  opacity: 0.8;
+}
+
+.pc-axis text {
+  font-size: 12px;
+}
+
+.pc-axis path,
+.pc-axis line {
+  stroke: #999;
+}
+
+.parallel-coordinates {
+  transition: opacity 0.5s ease;
+}

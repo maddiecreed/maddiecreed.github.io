@@ -1,0 +1,24 @@
+﻿Used:
+STATE,State abbreviation
+PARTY_R,"0=Democrat, 1 = Republican"
+YES,"0=Nay vote, 1= Yea vote"
+PERCENT_RURAL,Percentage of rural constituents
+MEAN_INCOME,Mean income by household for the district
+PERCENT_PRIVATE,Percentage of total students that attend private school
+PERCENT_21_W,2021 percent White population
+PERCENT_21_B,2021 percent Black population
+PERCENT_21_H,2021 percent Hispanic population
+
+
+
+Unused:
+PERCENT_21_A,2021 Percentage Asian population
+CHANGE_A,Change in percentage points in Asian population from 2011-2021
+CHANGE_HISP,Change in percentage points in Hispanic population from 2011-2021
+PERCENT_21_FBLA,2021 Percentage foreign born from Latin America
+PERCENT_21_FBA,2021 Percentage foreign born from Asia
+CHANGE_FBLA,Change in percentage points in foreign born Latin American population from 2011-2021
+CHANGE_FBA,Change in percentage points in foreign born Asian population from 2011-2021
+H_OR_S,House or Senate
+DISTRICT,Representative district
+NAME,District's Representative
