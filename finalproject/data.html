@@ -33,7 +33,7 @@
 
 <script>
 // Load and insert first table
-fetch('/data/data-vis-final-metadata.csv')
+fetch('data/data-vis-final-metadata.csv')
   .then(res => res.text())
   .then(text => {
     const rows = text.trim().split('\n').map(line => line.split(','));
@@ -42,7 +42,7 @@ fetch('/data/data-vis-final-metadata.csv')
   });
 
 // Load and insert second table
-fetch('/data/data-vis-final-data.csv')
+fetch('data/data-vis-final-data.csv')
   .then(res => res.text())
   .then(text => {
     const rows = text.trim().split('\n').map(line => line.split(','));
